@@ -1,8 +1,9 @@
 # Python Backend Railway
 Python バックエンド 初級編
 
-## 注意
+## はじめに
 このリポジトリはTechTrainの教材学習用のリポジトリです
+
 org:https://github.com/TechBowl-japan/python-be-syokyu
 
 ## 環境構築
