@@ -1,0 +1,14 @@
+{
+    "name": "Station 16",
+    "id": 16,
+    "prepare": [],
+    "tests": [
+        {
+            "type": "junit-compat",
+            "command": "docker compose exec -w /opt/python-be-syokyu-app app pytest tests/test_station16.py --junit-xml=./test-outputs/station16.xml",
+            "args": [],
+            "shell": true,
+            "reportFile": "/test-outputs/station16.xml"
+        }
+    ]
+}

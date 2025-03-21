@@ -1,0 +1,24 @@
+# Mac
+.DS_Store
+
+# Python
+__pycache__/
+
+# Python venv
+.venv/
+
+# Pytest
+.pytest_cache/
+.coverage
+
+# VSCode
+/.vscode/*
+!/.vscode/extensions.json
+
+# Project
+/.env
+
+# TechTrain
+/.techtrain/config.toml
+/test-outputs/*
+!/test-outputs/.keep
