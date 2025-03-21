@@ -5,6 +5,9 @@ from app.models.item_model import ItemModel
 from app.models.list_model import ListModel
 from app.schemas.item_schema import NewTodoItem, UpdateTodoItem
 
+def get_todo_items(db: Session):
+    return db.query(ItemModel).all()
+
 def get_todo_item(db: Session, todo_list_id: int, todo_item_id: int):
     return db.query(ItemModel).filter(
         ItemModel.id == todo_item_id,

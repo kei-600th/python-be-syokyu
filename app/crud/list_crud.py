@@ -3,6 +3,9 @@ from sqlalchemy.orm import Session
 from app.models.list_model import ListModel
 from app.schemas.list_schema import NewTodoList, UpdateTodoList
 
+def get_todo_lists(db: Session):
+    return db.query(ListModel).all()
+
 def get_todo_list(db: Session, todo_list_id: int):
     return db.query(ListModel).filter(ListModel.id == todo_list_id).first()
 

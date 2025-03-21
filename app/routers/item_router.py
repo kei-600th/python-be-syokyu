@@ -10,6 +10,10 @@ router = APIRouter(
     tags=["Todo項目"]
 )
 
+@router.get("/", response_model=list[ResponseTodoItem])
+def get_todo_items(db: Session = Depends(get_db)):
+    return item_crud.get_todo_items(db)
+
 @router.get("/{todo_item_id}", response_model=ResponseTodoItem)
 def get_todo_item(todo_list_id: int, todo_item_id: int, db: Session = Depends(get_db)):
     return item_crud.get_todo_item(db, todo_list_id, todo_item_id)
